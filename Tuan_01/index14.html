@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        .email{
+            display: flex;
+            justify-content: center;
+            gap: 19px;
+            margin: 10px;
+        }
+        .ph{
+            display: flex;
+            justify-content: center;
+        }
+        .stars {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+        .stars input {
+            display: none;
+        }
+        .stars label {
+            font-size: 25px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .stars input:checked ~ label,
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form gửi phản hồi khách hàng</h1>
+    <form>
+        <div class="stars">
+            <input type="radio" id="5" name="rating"><label for="5">&#9733;</label>
+            <input type="radio" id="4" name="rating"><label for="4">&#9733;</label>
+            <input type="radio" id="3" name="rating"><label for="3">&#9733;</label>
+            <input type="radio" id="2" name="rating"><label for="2">&#9733;</label>
+            <input type="radio" id="1" name="rating"><label for="1">&#9733;</label>
+        </div>
+        <div class="email"> 
+            <label>Email của bạn:</label>
+            <input type="email" required>
+        </div>
+        <div class="ph">
+            <label>Phản hồi của bạn:</label>
+            <textarea rows="3"></textarea>
+        </div>
+        <div style="text-align:center;"><br>
+            <button type="submit">Gửi</button>
+        </div>
+    </form>
+</body>
+</html>
